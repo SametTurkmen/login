@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/* 
+        Samet TÜRKMEN
+*/
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+    font-family: "Poppins", sans-serif;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+body {
+    background: #f8f8fb;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.component {
+    &--login {
+        $primary-color: #556ee6;
+        $trout-color: #495057;
+
+        width: 451px;
+
+        .login-card {
+            margin-bottom: 36px;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px 0 rgba($color: #12263f, $alpha: 0.05);
+
+            header {
+                background: rgba($primary-color, 0.25) url(/img/header-photo.svg) no-repeat right;
+                height: 112px;
+                padding: 24px;
+                color: $primary-color;
+                h5 {
+                    font-size: 16px;
+                    font-weight: 500;
+                    margin-bottom: 8px;
+                }
+                p {
+                    font-size: 13px;
+                }
+            }
+
+            .login-content {
+                padding: 0 28px 24px;
+                background: #fff;
+                .avatar {
+                    width: 72px;
+                    height: 72px;
+                    img {
+                        border-radius: 50%;
+                        transform: translateY(-33%);
+                        border: 2px solid #f8f8fb;
+                    }
+                }
+                form {
+                    ul {
+                        li {
+                            margin-bottom: 16px;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+
+                            .title {
+                                font-weight: 500;
+                                font-size: 13px;
+                                line-height: 19px;
+                                color: $trout-color;
+                                margin-bottom: 8px;
+                            }
+                            input {
+                                width: 100%;
+                                border: 1px solid #ced4da;
+                                font-size: 13px;
+                                color: $trout-color;
+                                padding: 8px;
+                                border-radius: 4px;
+                                transition: 300ms caret-color, 300ms border-color;
+                                &:focus{
+                                    border-color: $primary-color;
+                                    caret-color: $primary-color;
+                                }
+                            }
+                            > .checkbox {
+                                display: flex;
+                                align-items: center;
+                                cursor: pointer;
+
+                                .checkbox {
+                                    width: 16px;
+                                    height: 16px;
+                                    border-radius: 4px;
+                                    border: 1px solid #adb5bd;
+                                    margin-right: 8px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    transition:  300ms border-color,300ms background-color;
+                                    svg {
+                                        fill: #fff;
+                                    }
+                                }
+                                .text {
+                                    font-size: 13px;
+                                    font-weight: 500;
+                                    color: $trout-color;
+                                }
+                                input {
+                                    display: none;
+                                    &:checked + .checkbox {
+                                        background: $primary-color;
+                                        border-color: $primary-color;
+                                    }
+                                }
+                            }
+
+                            .login-btn {
+                                width: 100%;
+                                padding: 8px;
+                                background: $primary-color;
+                                color: #fff;
+                                border-radius: 4px;
+                                margin-bottom: 24px;
+                                cursor: pointer;
+                                transition: 300ms background-color;
+                                &:hover {
+                                    background: darken($primary-color, $amount: 5%);
+                                }
+                            }
+                            .forgot-password {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 13px;
+                                font-weight: 500;
+                                color: #74788d;
+                                transition: 300ms color;
+                                &:hover{
+                                color: darken($color: #74788d, $amount: 20%);
+                                }
+                                img {
+                                    margin-right: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .login-text {
+            p {
+                font-size: 13px;
+                color: $trout-color;
+                text-align: center;
+                margin-bottom: 16px;
+                :last-child {
+                    margin-bottom: 0;
+                }
+                a {
+                    color: $primary-color;
+                    font-weight: 500;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
